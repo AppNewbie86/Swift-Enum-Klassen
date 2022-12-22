@@ -10,8 +10,11 @@ import UIKit
 // Enum Klassen und ihre Verwendung
 
 // wird auch als Aufzählung definiert (gemeinsamer Typ einer Gruppe mit gleichem Werten)
+
 // sind wie Structuren auch Wertetypen
+
 // Dienen der Gruppierung von Werten haben jedoch keine eigenen Eigenschaften
+
 // Werte werden hier als cases bezeichnet
 
 
@@ -38,6 +41,7 @@ case .Sunday:print("heute ist sonntag")
 // Compass
 
 // Werteklasse die von CaseIterable erbt
+
 enum Compass : CaseIterable {
     // Case beschreibt den Inhalt
     case Norden, Osten, Süden, Westen
@@ -45,8 +49,11 @@ enum Compass : CaseIterable {
 
 
 // Variable zum Speichern des RandomElements wo dann darüber abgerufen werden kann
+
 var compass = Compass.allCases.randomElement()!
+
 // Verzweigung auf die Antworten
+
 switch compass {
 case.Norden: print("Im Norden, ist sie nie zu sehen")
 case .Osten: print("Im Osten, geht die Sonne auf")
@@ -63,13 +70,17 @@ case .Westen: print("Im Westen, will sie untergeh'n")
 
 // Werteklasse die von CaseIterable erbt
 enum Weather : CaseIterable {
+    
     // Case beschreibt den Inhalt
-    case Sonnig, Regnerisch, Stuermig, Windig
+   
+   case Sonnig, Regnerisch, Stuermig, Windig
 }
+
 // Variable zum Speichern des RandomElements wo dann darüber abgerufen werden kann
 var weather = Weather.allCases.randomElement()!
 
 // hier vergleicht der den Getroffenen Fall mit der Wettersituation und druckt den dementsprechenden Text raus
+
 switch weather {
 case.Sonnig: print("Heute brauch man keinen Regenschirm")
 case .Regnerisch: print("Das regenrisiko ist sehr hoch, nehmen sie zu ihrer Sicherheit einen Schirm mit")
@@ -87,7 +98,8 @@ case .Stuermig: print("Es ist drsaussen sehr stuermig")
 // Werteklasse die von CaseIterable erbt
 
 enum Orakel: CaseIterable{
-    // Inhalt des Cases
+    
+ //Inhalt des Cases
     case positiv, neutral, negativ
     static func random() -> Orakel{
         return allCases.randomElement()!
@@ -95,18 +107,24 @@ enum Orakel: CaseIterable{
 }
 
 // Array 1
+
 let positivArray = ["Sauber Kerle","Ja hop weiter so"]
 
 // Array 2
+
 let neutralArray = ["sollte eventuell passen","Vielleicht"]
 
 // Array 3
+
 let negativArray = ["No No ","No Chance"]
 
 
 // Variable gesetzt wo die Situation random abspeichert
+
 var situation = Orakel.random()
+
 // Verzweigung auf die Antworten
+
 switch situation {
 case.positiv: print(positivArray.randomElement()!)
 case.neutral: print(neutralArray.randomElement()!)
